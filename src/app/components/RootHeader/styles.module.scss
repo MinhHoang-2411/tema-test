@@ -1,0 +1,142 @@
+.headerContainer {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: center;
+  .sidebarContainer {
+    display: none;
+    @media (max-width: 900px) {
+      display: block;
+    }
+  }
+  .searchContainer {
+    flex: 1;
+    @media (max-width: 900px) {
+      display: none;
+    }
+  }
+  .searchInput {
+    width: 100%;
+    border-radius: 40px;
+    padding: 14px 16px;
+    font-size: 16px;
+  }
+  .actsBtnContainer {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    .signInBtn,
+    .signOutBtn {
+      background-color: transparent;
+      color: var(--white);
+    }
+    .signInBtn,
+    .signUpBtn,
+    .signOutBtn {
+      font-weight: bold;
+      @media (max-width: 900px) {
+        display: none;
+      }
+    }
+    .cartLogo {
+      position: relative;
+      font-size: 24px;
+      cursor: pointer;
+      .cartBadge {
+        position: absolute;
+        top: -5px;
+        right: -10px;
+        background-color: red;
+        color: white;
+        font-size: 12px;
+        font-weight: bold;
+        width: 18px;
+        height: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+      }
+      .cartPopup {
+        position: absolute;
+        top: 40px;
+        right: -13px;
+        padding: 24px;
+        border: 1px solid var(--gray-500);
+        border-radius: 8px;
+        background-color: var(--white);
+        z-index: 800;
+        color: var(--gray-800);
+        width: 300px;
+        .cartPopupTitle {
+          font-size: 16px;
+          font-weight: bold;
+        }
+        .goToCartBtn {
+          width: 100%;
+          margin-top: 12px;
+        }
+      }
+    }
+  }
+}
+
+//side bar
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px; // hide sidebar when not open
+  width: 300px;
+  height: 100vh;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  transition: left 0.3s ease-in-out;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+
+  &.open {
+    left: 0; // show sidebar when open
+  }
+
+  .authBtnsContainer {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    button {
+      background-color: transparent !important;
+      color: var(--white) !important;
+      text-align: start;
+    }
+  }
+
+  .searchMobileContainer {
+    margin-top: 30px;
+  }
+
+  .closeBtn {
+    background-color: transparent;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+  }
+}
+
+.sidebarToggle {
+  cursor: pointer;
+  padding: 0;
+  background-color: transparent;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}

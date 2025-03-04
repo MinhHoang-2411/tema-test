@@ -1,0 +1,27 @@
+.wrapper{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .formContainer{
+        background: var(--white);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        margin: 20px 0;
+        padding: 40px;
+        width: 100%;
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        .title{
+            text-align: center;
+        }
+    }
+    .signInLink, .signUpLink{
+        &:hover{
+            color: var(--primary-color);
+        }
+    }
+}
