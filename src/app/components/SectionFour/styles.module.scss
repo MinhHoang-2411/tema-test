@@ -1,0 +1,54 @@
+.container {
+  background-color: #f6f6f6;
+  .contentContainer {
+    margin: 0 auto;
+    padding: 120px 20px;
+    max-width: 1440px;
+    @media (max-width: 900px) {
+      padding: 40px 0;
+    }
+    .title {
+      font-weight: 900;
+      text-align: center;
+      margin-bottom: 80px;
+      letter-spacing: 3.6px;
+      @media (max-width: 900px) {
+        font-size: 40px;
+        margin-bottom: 40px;
+        letter-spacing: 0.6px;
+      }
+    }
+    .slideContainer {
+      position: relative;
+      .prevButton {
+        left: 0px;
+        @media (min-width: 900px) {
+          left: -50px;
+        }
+      }
+      .nextButton {
+        right: 0px;
+        @media (min-width: 900px) {
+          right: -50px;
+        }
+      }
+      button {
+        padding: 0;
+        background-color: transparent;
+        position: absolute;
+        z-index: 1000;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .partnerImg {
+        position: relative;
+        width: 260px !important;
+        height: 100px !important;
+        @media (max-width: 900px) {
+          width: 188px !important;
+          height: 72px !important;
+        }
+      }
+    }
+  }
+}

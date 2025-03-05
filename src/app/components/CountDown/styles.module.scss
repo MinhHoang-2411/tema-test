@@ -1,0 +1,42 @@
+.countDownContainer {
+  position: relative;
+  top: 21px;
+  z-index: 93;
+  display: flex;
+  justify-content: space-between;
+  padding: 26px 40px;
+  width: 100%;
+  background-color: var(--white);
+  border-radius: 21px;
+  color: #000;
+  @media (max-width: 900px) {
+    padding: 24px 26px;
+  }
+  .timeBox {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .timeNumber {
+      font-weight: 900;
+    }
+    .timeLabel {
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: -0.65px;
+      @media (max-width: 900px) {
+        font-size: 12px;
+      }
+    }
+  }
+  .timeDivider {
+    font-weight: 400;
+    font-size: 66px;
+    line-height: 80px;
+    letter-spacing: -0.65px;
+    @media (max-width: 900px) {
+      font-size: 40px;
+      line-height: 49px;
+    }
+  }
+}

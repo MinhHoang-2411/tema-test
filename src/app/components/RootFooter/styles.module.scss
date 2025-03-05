@@ -1,0 +1,144 @@
+.footerWrapper {
+  .topFooterContainer {
+    position: relative;
+    background-image: url("/background/footer.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 446px;
+    @media (max-width: 900px) {
+      height: 780px;
+    }
+
+    .content {
+      margin: auto;
+      padding: 100px 20px;
+      max-width: 1440px;
+      display: flex;
+      justify-content: space-between;
+      @media (max-width: 900px) {
+        padding: 40px 16px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 68px;
+      }
+      .socialContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        .logoImg {
+          width: 163px;
+          height: 96px;
+        }
+        .socialLogos {
+          display: flex;
+          gap: 24px;
+          .socialImg {
+            width: 40px;
+            height: 40px;
+          }
+        }
+      }
+      .otherInformationContainer {
+        display: flex;
+        gap: 40px;
+        @media (max-width: 900px) {
+          flex-direction: column;
+          gap: 68px;
+        }
+        .addressBlockContainer,
+        .subscribeBlockContainer {
+          flex: 1;
+          max-width: 410px;
+          display: flex;
+          flex-direction: column;
+          gap: 40px;
+          color: var(--white);
+          @media (max-width: 900px) {
+            gap: 20px;
+          }
+          .locationContainer,
+          .contactContainer {
+            display: flex;
+            gap: 8px;
+            .locationInfoContainer {
+              display: flex;
+              flex-direction: column;
+              gap: 12px;
+            }
+            .infoImg {
+              width: 40px;
+              height: 40px;
+            }
+          }
+          .contactContainer {
+            align-items: center;
+          }
+          .subscribeContent {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            .inputContainer {
+              background-color: transparent;
+              display: flex;
+              border-radius: 8px;
+              border: 1px solid #fff;
+              overflow: hidden;
+              input {
+                background-color: transparent;
+                height: 56px;
+                padding: 14px;
+                flex: 1;
+                border: none;
+                outline: none;
+                color: #fff;
+                font-size: 14px;
+                &::placeholder {
+                  color: white;
+                  opacity: 1;
+                }
+
+                &:-ms-input-placeholder {
+                  // for IE 10+
+                  color: white;
+                }
+
+                &::-ms-input-placeholder {
+                  // for Edge
+                  color: white;
+                }
+              }
+              button {
+                background-color: transparent;
+                border-radius: 0;
+              }
+            }
+          }
+          .title {
+            font-weight: 700;
+            font-size: 24px;
+          }
+          p {
+            font-weight: 400;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  .bottomFooterContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    color: var(--white);
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    height: 80px;
+  }
+  .imageWrapper {
+    position: relative;
+  }
+}

@@ -1,29 +1,25 @@
-import React from 'react'
-import styles from './styles.module.scss'
-import Image from 'next/image'
-import Link from 'next/link'
-import HeaderActionButtons from './HeaderActionButtons'
-import HeaderSearch from './HeaderSearch'
-import Sidebar from './Sidebar'
+import React from "react";
+import styles from "./styles.module.scss";
+import Image from "next/image";
+import { Link } from "@/i18n/navigation";
+import HeaderActionButtons from "./HeaderActionButtons/HeaderActionButtons";
+import Sidebar from "./Sidebar/Sidebar";
 function RootHeader() {
   return (
     <div className={styles.headerContainer}>
-      {/* side bar  */}
-      <div className={styles.sidebarContainer} >
-        <Sidebar/>
-      </div>
-      <Link href='/'>
-        <Image src='/logo.svg' width={250} height={41} alt='logo'/>
+      <Link href="/">
+        <div className={styles.logoImg}>
+          <Image src="/icons/logo.png" fill objectFit="contain" alt="logo" />
+        </div>
       </Link>
-      {/* search  */}
-      <div className={styles.searchContainer}>
-        <HeaderSearch/>
+      {/* side bar  */}
+      <div className={styles.sidebarContainer}>
+        <Sidebar />
       </div>
       {/* act btns  */}
-      <HeaderActionButtons/>
-      {/* cart btn  */}
+      <HeaderActionButtons />
     </div>
-  )
+  );
 }
 
-export default RootHeader
+export default RootHeader;

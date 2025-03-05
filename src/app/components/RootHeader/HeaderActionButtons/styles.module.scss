@@ -1,0 +1,15 @@
+.actsBtnContainer {
+  display: flex;
+  gap: 84px;
+  justify-content: space-between;
+  align-items: center;
+  @media (max-width: 900px) {
+    display: none;
+  }
+  .actBtn {
+    background: transparent;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 0 !important;
+  }
+}

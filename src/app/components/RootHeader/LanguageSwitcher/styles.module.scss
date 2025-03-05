@@ -1,0 +1,67 @@
+.switcherLanguageContainer {
+  position: relative;
+  @media (max-width: 900px) {
+    width: 80px;
+    height: 40px;
+    background-color: #f6f6f6;
+    border-radius: 8px;
+    border: 1px solid #afafaf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .flagLanguageContainer {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    cursor: pointer;
+    .arrowDown {
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid var(--white);
+      @media (max-width: 900px) {
+        border-top: 5px solid black;
+      }
+    }
+  }
+  .switcherPopupContainer {
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background-color: var(--white);
+    width: 156px;
+    border-radius: 8px;
+    padding: 8px;
+    @media (max-width: 900px) {
+      left: 0;
+      bottom: -96px;
+      border: 1px solid #afafaf;
+      background-color: #f6f6f6;
+    }
+    .divider {
+      content: "";
+      width: 100%;
+      border-bottom: 1px solid #ccc;
+    }
+    .languageItemContainer {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      font-size: 10px;
+      font-weight: 700;
+      .tickContainer {
+        width: 24px;
+        height: 24px;
+      }
+      .flagContainer {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+    }
+  }
+}
